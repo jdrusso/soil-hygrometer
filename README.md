@@ -5,6 +5,18 @@ This repository contains code to integrate an Arduino-based soil hygrometer into
 ## Overview
 This repository is used to set up a system with an Arduino-based hygrometer communicating back to the Caprica hub.
 
+Basically I'm terrible at growing plants but I'm OK at electronics and writing code, so I figured I'd use the latter 
+to do the former. A hygrometer measures soil moisture content, by measuring the resistance between two probes in the 
+soil. More moist soil has higher conductivity/lower resistance, so as the soil dries out, you can watch the resistance
+increase.
+
+This system consists of two parts. An Arduino with a hygrometer and an RF transceiver sits at the planter box, and wirelessly
+communicates to another transceiver connected to a Raspberry Pi's GPIO ports.
+
+Progress on this has been stalled for a while, due to ruining my hygrometer -- I was taking measurements continuously, 
+which I think was basically just electrolyzing the water in the soil. The contacts on the hygrometer got horribly
+oxidized, and I haven't replaced it yet.
+
 ### Arduino
 The Arduino (or similar compatible microcontroller) side consists of a simple sketch to read data from a YL-38 +  YL-69 hygrometer and controller combination.
 
